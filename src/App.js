@@ -1,7 +1,10 @@
 import React, { Component } from 'react';
 import './style/style.css';
+import MySvg from  './blocks/mySvg';
 
-import MySvg from  './blocks/mySvg'
+import ControllerMain from  './controller/main';
+
+import MainMenu from  './blocks/mainMenu';
 
 class App extends Component {
     render() {
@@ -9,9 +12,8 @@ class App extends Component {
             <div>
                 <MySvg />
                 <div className="mainBlock__wrapper">
-                    <div className="mainBlock">
+                    <ControllerMain />
 
-                    </div>
                     <MainMenu />
                 </div>
             </div>
