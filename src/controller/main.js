@@ -2,6 +2,10 @@ import React, { Component } from 'react';
 
 import Account from  '../pages/account';
 import Messages from  '../pages/messages';
+import Message from  '../pages/messages';
+import Maps from  '../pages/maps';
+import Login from  '../pages/maps';
+import IndexPage from  '../pages/indexPage.js';
 
 
 function pageGET() {
@@ -12,15 +16,15 @@ function pageGET() {
 
     switch (pathName) {
         case 'index.html':
-            //  appendPage('main.html', true);
+            return <IndexPage />;
             break;
 
         case 'registration.html':
-            //  appendPage('registration.html', true);
+            return <Login />;
             break;
 
         case 'login.html':
-            //   appendPage('login.html');
+            return <Login />;
             break;
 
         case 'account.html':
@@ -28,12 +32,11 @@ function pageGET() {
             break;
 
         case 'maps.html':
-            //   appendPage('maps.html');
+            return <Maps />;
             break;
 
-
         case 'settings.html':
-            //  appendPage('settings.html');
+            return <Login />;
             break;
 
         case 'messages.html':
@@ -41,16 +44,15 @@ function pageGET() {
             break;
 
         case 'message.html':
-
+            return <Message />;
             break;
 
         case 'search.html':
-            //  appendPage('search.html');
+            return <Login />;
             break;
 
         default:
-            console.log('index');
-            //   appendPage('main.html', true);
+                return <IndexPage />;
             break;
     }
 }
